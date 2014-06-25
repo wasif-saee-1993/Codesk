@@ -1,0 +1,48 @@
+﻿@model WasifProject.Models.UserTable
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.userName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.passwork)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.e_mail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.reg_date)
+        </th>
+        <th></th>
+    </tr>
+
+
+    <tr>
+        <td>
+            @Html.DisplayFor(model => model.userName)
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.passwork)
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.e_mail)
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.reg_date)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=Model.Id  }) |
+            @Html.ActionLink("Details", "Details", new { id=Model.Id }) |
+            @Html.ActionLink("De Activate", "Delete", new { id=Model.Id })
+        </td>
+    </tr>
+
+
+</table>
