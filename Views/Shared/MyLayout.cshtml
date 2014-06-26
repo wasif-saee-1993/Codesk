@@ -80,12 +80,7 @@
 				<h1>Uplaod code</h1><br/>
 				
 		            <a href="~/File/Upload"> <input type="button" style= "background-image:url(../Images/upload_1.png);height:100px;width:100px;background-color: transparent;" /></a>
-				    <h4>Recently public</h4>
-				<div class="tweets">
-					<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem.<br><a href="#">20 days ago</a></p>
-					<p>Accusantium doloremque laudatium, totam rem aperiam, eaque ipsa.<br><a href="#">36 days ago</a></p>
-					<p>Nemo enim ipsam voluptatem quia voluptas.<br><a href="#">54 days ago</a></p>
-				</div>
+				    @RenderSection("images",required:false)
     		</article>
 		</div>
 	</section>
