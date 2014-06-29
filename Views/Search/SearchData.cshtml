@@ -1,6 +1,7 @@
 ﻿@model IEnumerable<WasifProject.Models.FileData>
 @{
     ViewBag.Title = "SearchData";
+    
 }
 <table border:2>
     <tr>
@@ -33,9 +34,14 @@
         <td>
             @Html.DisplayFor(modelItem => item.C_protectionLevel)
         </td>
-        <td>
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Download", "Delete", new { id=item.Id })
+        <td>detail.png
+            <a href="~/File/Details?id=@item.Id"><img src="~/Images/detail.png"> </a>
+            
+                | 
+            @{string urlOfFile = Url.Content("~/Files/" + item.user_id + item.fileName + "." + item.type);}
+            <a href="@urlOfFile" target='_blank'><img src='../Images/download.png'></a>
+                
+
         </td>
     </tr>
 }

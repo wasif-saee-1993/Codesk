@@ -57,7 +57,7 @@
 					</div>
                   <form id="abc">
 					    
-					   <a href="../Search/SearchResult" ><img src="~/Images/search.png" height="50" width="100"  /></a>
+					   <a href="../Search/Index" ><img src="~/Images/search.png" height="50" width="100"  /></a>
 				    </form>
 					
                     
@@ -94,8 +94,9 @@
                                         @Html.DisplayFor(modelItem => item.C_protectionLevel)
                                     </td>
                                     <td>
-                                        @Html.ActionLink("Details", "Details","File", new { id=item.Id },null) |
-                                        @Html.ActionLink("Delete", "Delete","File", new { id=item.Id },null)
+                                        <a href="~/File/Details?id=@item.Id"><img src="~/Images/detail.png"> </a>|
+                                        <a href="~/File/Delete?id=@item.Id"><img src="~/Images/del.jpg"> </a>
+                                       
                                     </td>
                                 </tr>
                             }

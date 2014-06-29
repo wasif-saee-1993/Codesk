@@ -5,7 +5,7 @@
     ViewBag.Title = "Details";
     
     
-    string urlOfFile = "~/Files/"+Model.user_id + Model.fileName + "." + Model.type;
+    string urlOfFile =Url.Content( "~/Files/"+Model.user_id + Model.fileName + "." + Model.type);
     
 }
 
@@ -52,13 +52,14 @@
       </tr>
     </table>
         
-       @* <iframe src='@urlOfFile'  width="500" height="200"></iframe>*@
+       <iframe src='@urlOfFile'  width="500" height="200"></iframe>
 
     </div>
 
 </fieldset>
 <p>
     <a href="~/File/Index"><img src="~/Images/prettyPhoto/facebook/btnPrevious.png"></a>
-    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) 
+    <a href="~/File/Edit?id=@Model.Id"><img src="~/Images/edit.png"> </a> |
+    
 </p>
 

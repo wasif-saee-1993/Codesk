@@ -32,7 +32,7 @@ Loading
                        
                         div.html("<br/> " + "Data received from DB: " + "<br/>");
                         $.each(data, function (i, item) {
-                            div.append("<br/>" + "File Name: " + item.fileName + ", user ID: " + item.user_id + " file type:  " + item.type + " <a href=..\\Files\\" + item.user_id + "" + item.fileName + "." + item.type + " target='_blank'> <img src='~/Images/download.png'> </a>");
+                            div.append("<br/>" + "File Name: " + item.fileName + ", user ID: " + item.user_id + " file type:  " + item.type + " <a href=..\\Files\\" + item.user_id + "" + item.fileName + "." + item.type + " target='_blank'> <img src='../Images/download.png'> </a>");
                         });
                     }
                     else {

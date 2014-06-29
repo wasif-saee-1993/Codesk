@@ -42,9 +42,10 @@
             @Html.DisplayFor(modelItem => item.C_protectionLevel)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+             <a href="~/File/Edit?id=@item.Id"><img src="~/Images/edit.png"> </a> |
+            <a href="~/File/Details?id=@item.Id"><img src="~/Images/detail.png"> </a>
+            |
+            <a href="~/File/Delete?id=@item.Id"><img src="~/Images/del.jpg"></a>
         </td>
     </tr>
 }
