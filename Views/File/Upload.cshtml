@@ -6,7 +6,7 @@
 
 <h2>Upload</h2>
 
-@using (Html.BeginForm("UploadAndRevify", "File", "post"))
+@using (Html.BeginForm("UploadAndRevify", "File", FormMethod.Post, new { @id = "form1", @enctype = "multipart/form-data" }))
 {
  @Html.AntiForgeryToken()
     @Html.ValidationSummary(true)
@@ -51,7 +51,7 @@
                 </div>
             </td>
             <td>
-                <input type="file" name="file">
+                <input type="file" name="file" id="file1">
             </td>
         </tr>
         <tr>

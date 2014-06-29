@@ -1,43 +1,64 @@
 ﻿@model WasifProject.Models.FileData
 
 @{
+    
     ViewBag.Title = "Details";
+    
+    
+    string urlOfFile = "~/Files/"+Model.user_id + Model.fileName + "." + Model.type;
+    
 }
 
 <h2>Details</h2>
 
 <fieldset>
-    <legend>FileData</legend>
-
-    <div class="display-label">
+    <legend></legend>
+    <div class="datagrid">
+    <table>
+        <tr>
+            <th>
          @Html.DisplayNameFor(model => model.user_id)
-    </div>
-    <div class="display-field">
+            </th>
+            <td>
         @Html.DisplayFor(model => model.user_id)
-    </div>
+            </td>
+        </tr>
 
-    <div class="display-label">
+        <tr>
+            <th>
          @Html.DisplayNameFor(model => model.fileName)
-    </div>
-    <div class="display-field">
+            </th>
+            <td>
+    
         @Html.DisplayFor(model => model.fileName)
-    </div>
-
-    <div class="display-label">
+            </td>
+           </tr>
+        <tr>
+            <th>
          @Html.DisplayNameFor(model => model.type)
-    </div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.type)
+            </th>
+            <td>
+          @Html.DisplayFor(model => model.type)
+            </td>
+         </tr>
+         <tr>
+             <th>
+                
+         @Html.DisplayNameFor(model => model.C_protectionLevel)
+            </th>
+            <td>
+        @Html.DisplayFor(model => model.C_protectionLevel)
+            </td>
+      </tr>
+    </table>
+        
+       @* <iframe src='@urlOfFile'  width="500" height="200"></iframe>*@
+
     </div>
 
-    <div class="display-label">
-         @Html.DisplayNameFor(model => model.C_protectionLevel)
-    </div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.C_protectionLevel)
-    </div>
 </fieldset>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
-    @Html.ActionLink("Back to List", "Index")
+    <a href="~/File/Index"><img src="~/Images/prettyPhoto/facebook/btnPrevious.png"></a>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) 
 </p>
+
